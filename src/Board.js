@@ -78,6 +78,7 @@
     // --------------------------------------------------------------
     //
     // test if a specific row on this board contains a conflict
+    // O(n)
     hasRowConflictAt: function(rowIndex) {
       // var board = new Board([[1,0,0],[0,1,0],[0,0,1]])
       // board.hasRowConflictAt(1)
@@ -90,6 +91,7 @@
     },
 
     // test if any rows on this board contain conflicts
+    // O(n**2)
     hasAnyRowConflicts: function() {
       // return false; // fixme
       // apply has row conflict to all row
@@ -109,6 +111,7 @@
     // --------------------------------------------------------------
     //
     // test if a specific column on this board contains a conflict
+    // O(n**2)
     hasColConflictAt: function(colIndex) {
       // return false; // fixme
       // similar to row
@@ -121,6 +124,7 @@
     },
 
     // test if any columns on this board contain conflicts
+    // O(n**2)
     hasAnyColConflicts: function() {
       // return false; // fixme
       // similar
@@ -138,6 +142,7 @@
     // --------------------------------------------------------------
     //
     // test if a specific major diagonal on this board contains a conflict
+    // O(n)
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow) {
       // return false; // fixme
       // diagonal to the right
@@ -154,6 +159,7 @@
     },
 
     // test if any major diagonals on this board contain conflicts
+    // O(n**2)
     hasAnyMajorDiagonalConflicts: function() {
       // return false; // fixme
       for (let i = 0; i < this.get('n'); i++) {
@@ -170,6 +176,7 @@
     // --------------------------------------------------------------
     //
     // test if a specific minor diagonal on this board contains a conflict
+    // O(n)
     hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow) {
       // return false; // fixme
       // top-right to bottom left
@@ -185,6 +192,7 @@
     },
 
     // test if any minor diagonals on this board contain conflicts
+    // O(n**2)
     hasAnyMinorDiagonalConflicts: function() {
       // return false; // fixme
       for (let i = 0; i < this.get('n'); i++) {
