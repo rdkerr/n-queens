@@ -95,10 +95,10 @@ var findAllNQueensSolutions = function(n, single) {
   //   result.push([]);
   // }
   if (n === 2 && single) {
-    result.push([[0,0], [0,0]]);
+    result.push([[0, 0], [0, 0]]);
   }
   if (n === 3 && single) {
-    result.push([[0,0,0], [0,0,0], [0,0,0]]);
+    result.push([[0, 0, 0], [0, 0, 0], [0, 0, 0]]);
   }
   var blank = _.range(n).map(()=>0);
 
