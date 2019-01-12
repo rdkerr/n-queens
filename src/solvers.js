@@ -41,7 +41,7 @@ window.NQueens = function(n) {
   var count = 0;
   // Used as a mask and to count how many
   // queens have been placed
-  var done = Math.pow(2,n) - 1;
+  var done = Math.pow(2, n) - 1;
   //Checks all possible board configurations
   var innerRecurse = function(ld, col, rd) {
     // All columns are occupied,
@@ -62,11 +62,11 @@ window.NQueens = function(n) {
       openColumns -= position;
       // Adds the position of the current queen to the working solution
       // Updates the left and right diagonal bit vectors
-      innerRecurse((ld|position)>>1, col|position, (rd|position)<<1);
+      innerRecurse((ld | position) >> 1, col | position, (rd | position) << 1);
     }
   };
   // Initial call with the board vectors empty
-  innerRecurse(0,0,0);
+  innerRecurse(0, 0, 0);
   return count;
 };
 
@@ -74,7 +74,7 @@ window.NRooks = function(n) {
   var count = 0;
   // Used as a mask and to count
   // how many rooks are placed
-  var done = Math.pow(2,n) - 1;
+  var done = Math.pow(2, n) - 1;
   // Recursively find number of solutions
   var innerRecurse = function(col) {
     // If columns is set to all 1s then a
@@ -96,7 +96,7 @@ window.NRooks = function(n) {
       openColumns -= position;
       // Adds position to  the current working solution and
       // calls the recursive funciton to see if its part of a valid solution
-      innerRecurse(col|position);
+      innerRecurse(col | position);
     }
   };
   // Initial call with the board vectors empty
